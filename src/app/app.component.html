@@ -1,0 +1,22 @@
+<p>
+	Creation of dynamic forms using using a json
+</p>
+<form [formGroup]="userForm">
+	<div *ngFor="let grp of fgControls" [formGroup]="grp">
+		<div *ngFor="let element of configData | keyvalue">
+			{{element.value.label}}
+			<ng-container [ngSwitch]="element.value.tagType">
+				<div *ngSwitchCase="'input'" class="field">
+					<input [placeholder]="element.value.placeholder" [formControlName]="element.value.name" [type]="element.value.type">
+        </div>
+			</ng-container>
+			</div>
+		<button (click)="submit()">Submit</button>
+	</div>
+</form>
+
+<br>
+Result
+<pre *ngIf="fgControls.length > 0">
+{{fgControls[0].value | json}}
+</pre>

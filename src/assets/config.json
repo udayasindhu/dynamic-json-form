@@ -1,0 +1,16 @@
+{
+  "fullName": {
+    "tagType": "input",
+    "label": "Full Name",
+    "placeholder": "Enter full name",
+    "name": "fullName",
+    "type": "text"
+  },
+  "age": {
+    "tagType": "input",
+    "label": "Age",
+    "placeholder": "Enter age",
+    "name": "age",
+    "type": "number"
+  }
+}
